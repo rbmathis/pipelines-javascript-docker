@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: rbmathispipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rbmathispipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: rbmathispipelinesjavascriptdocker 
+          image: mycontainerregistryrbm.azurecr.io/rbmathispipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
